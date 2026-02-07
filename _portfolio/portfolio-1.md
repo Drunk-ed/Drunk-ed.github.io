@@ -1,5 +1,5 @@
 ---
-title: "Coordinated Bimanual Teleoperation via Haptic Device" - Completed
+title: "Coordinated Bimanual Teleoperation via Haptic Device"
 excerpt: "Built a real-time bimanual control system in ROS 2 where a secondary ReactorX-200 robot arm mirrors the movements of a teleoperated leader arm."
 collection: portfolio
 ---

@@ -6,7 +6,7 @@ collection: portfolio
 <br/><img src='/images/image.png'>
 <h2 style="color:red;">Project Overview</h2>
 
-<p style="margin-top:4px;">
+<p style="margin-top:2px;">
 **Phantom_to_Interbotix_teleop** is a ROS 2–based teleoperation framework that enables real-time, intuitive control of an **Interbotix RX200 robotic arm** using a **Geomagic Touch (Phantom) haptic device**. The project bridges human hand motions captured by a force-feedback stylus with precise robotic arm movements, allowing an operator to manipulate the robot’s end-effector in a natural and responsive manner.
 </p>
 **Phantom_to_Interbotix_teleop** is a ROS 2–based teleoperation framework that enables real-time, intuitive control of an **Interbotix RX200 robotic arm** using a **Geomagic Touch (Phantom) haptic device**. The project bridges human hand motions captured by a force-feedback stylus with precise robotic arm movements, allowing an operator to manipulate the robot’s end-effector in a natural and responsive manner.

@@ -1,101 +1,96 @@
 ---
-title: "Coordinated Bimanual Teleoperation via Haptic Device copy"
-excerpt: "BBuilt a real-time bimanual control system in ROS 2 where a secondary ReactorX-200 robot arm mirrors the movements of a teleoperated leader arm."
+title: "Coordinated Bimanual Teleoperation via Haptic Device"
+excerpt: "Built a real-time bimanual control system in ROS 2 where a secondary ReactorX-200 robot arm mirrors the movements of a teleoperated leader arm."
 collection: portfolio
 ---
 
-<div style="max-width:900px; margin:auto; line-height:1.8; font-size:18px;">
+<div style="max-width:900px; margin:auto; line-height:1.5; font-size:17px;">
 
 <!-- Image -->
-<div style="text-align:center; margin:40px 0;">
+<div style="text-align:center; margin:20px 0;">
   <img src="/images/image.png" alt="Bimanual Teleoperation"
-       style="max-width:80%; border-radius:10px;">
+       style="max-width:75%; border-radius:8px;">
 </div>
 
 <!-- Project Overview -->
-<h2 style="color:#5dade2; margin-top:40px;">Project Overview</h2>
+<h2 style="color:#5dade2; margin-top:20px; margin-bottom:10px;">Project Overview</h2>
 
-<p>
+<p style="margin-bottom:10px;">
 <strong>Phantom_to_Interbotix_teleop</strong> is a ROS 2-based teleoperation
 framework that enables <strong>real-time, intuitive control</strong> of an
-<strong>Interbotix RX200 robotic arm</strong> using an
+<strong>Interbotix RX200 robotic arm</strong> using a
 <strong>Geomagic Touch (Phantom) haptic device</strong>.
 </p>
 
-<p>
+<p style="margin-bottom:10px;">
 The project bridges human hand motions captured by a force-feedback stylus
-with precise robotic arm movements, allowing an operator to manipulate the
-robot's end-effector in a natural and responsive manner.
+with precise robotic arm movements, allowing natural manipulation of the
+robot's end-effector.
 </p>
 
-<p>
-This system is particularly useful in robotics research, prototyping, and
-educational environments where <strong>human-in-the-loop control</strong> is
-required.
+<p style="margin-bottom:10px;">
+Useful for robotics research, prototyping, and educational environments
+requiring <strong>human-in-the-loop control</strong>.
 </p>
 
-<hr style="margin:40px 0;">
+<hr style="margin:20px 0;">
 
 <!-- Motivation -->
-<h2 style="color:#5dade2;">Motivation and Objectives</h2>
+<h2 style="color:#5dade2; margin-bottom:10px;">Motivation and Objectives</h2>
 
-<p>
-Robotic manipulation often requires fine-grained, intuitive control that can
-be difficult to achieve using traditional interfaces such as keyboards or
-joysticks.
+<p style="margin-bottom:10px;">
+Robotic manipulation requires intuitive control, which is difficult using
+keyboards or joysticks.
 </p>
 
-<p><strong>Main Objectives:</strong></p>
-
-<ul>
-  <li>Provide a <strong>natural teleoperation interface</strong></li>
-  <li>Integrate <strong>haptic devices with ROS 2 systems</strong></li>
-  <li>Enable <strong>real-time end-effector and gripper control</strong></li>
-  <li>Serve as a base for future teleoperation research</li>
+<ul style="margin-top:5px; margin-bottom:10px;">
+  <li>Natural teleoperation interface</li>
+  <li>Haptic + ROS 2 integration</li>
+  <li>Real-time end-effector & gripper control</li>
+  <li>Foundation for teleoperation research</li>
 </ul>
 
-<hr style="margin:40px 0;">
+<hr style="margin:20px 0;">
 
 <!-- Architecture -->
-<h2 style="color:#5dade2;">System Architecture</h2>
+<h2 style="color:#5dade2; margin-bottom:10px;">System Architecture</h2>
 
-<p>
-The system follows a ROS 2 <strong>publisher–subscriber architecture</strong>:
+<p style="margin-bottom:10px;">
+ROS 2 publisher–subscriber framework:
 </p>
 
-<ul>
-  <li><strong>Geomagic Touch</strong> publishes pose, orientation, and button data</li>
-  <li><strong>Teleoperation node</strong> subscribes and maps input</li>
-  <li><strong>Interbotix RX200</strong> executes motion commands</li>
+<ul style="margin-top:5px; margin-bottom:10px;">
+  <li>Geomagic Touch → pose & button data</li>
+  <li>Teleop node → input mapping</li>
+  <li>Interbotix RX200 → motion execution</li>
 </ul>
 
-<p>
-The teleoperation loop runs at approximately
-<strong>50 Hz</strong> to ensure smooth and stable motion.
+<p style="margin-bottom:10px;">
+Loop rate: <strong>~50 Hz</strong> for smooth motion.
 </p>
 
-<hr style="margin:40px 0;">
+<hr style="margin:20px 0;">
 
 <!-- Features -->
-<h2 style="color:#5dade2;">Key Features</h2>
+<h2 style="color:#5dade2; margin-bottom:10px;">Key Features</h2>
 
-<h3>Real-Time Teleoperation</h3>
-<ul>
-  <li>Continuous stylus-to-end-effector mapping</li>
-  <li>Low-latency response suitable for manipulation tasks</li>
+<h3 style="margin-bottom:5px;">Real-Time Teleoperation</h3>
+<ul style="margin-top:5px;">
+  <li>Continuous stylus mapping</li>
+  <li>Low-latency response</li>
 </ul>
 
-<h3>Multi-Mode Control</h3>
-<ul>
-  <li>Cartesian end-effector control</li>
+<h3 style="margin-bottom:5px;">Multi-Mode Control</h3>
+<ul style="margin-top:5px;">
+  <li>Cartesian control</li>
   <li>Joint-level wrist rotation</li>
   <li>Button-based mode switching</li>
 </ul>
 
-<h3>Gripper Control</h3>
-<ul>
-  <li>Toggle-based open/close control</li>
-  <li>Integrated with Interbotix gripper APIs</li>
+<h3 style="margin-bottom:5px;">Gripper Control</h3>
+<ul style="margin-top:5px;">
+  <li>Toggle open/close</li>
+  <li>Interbotix API integration</li>
 </ul>
 
 </div>

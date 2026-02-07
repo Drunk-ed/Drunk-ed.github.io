@@ -4,17 +4,16 @@ excerpt: "Built a real-time bimanual control system in ROS 2 where a secondary R
 collection: portfolio
 ---
 <br/><img src='/images/image.png'>
-<h2 style="color:red;">Project Overview</h2>
-<p style="margin-top:2px;">
+<h2 style="color:blue;">Project Overview</h2>
+
 **Phantom_to_Interbotix_teleop** is a ROS 2–based teleoperation framework that enables real-time, intuitive control of an **Interbotix RX200 robotic arm** using a **Geomagic Touch (Phantom) haptic device**. The project bridges human hand motions captured by a force-feedback stylus with precise robotic arm movements, allowing an operator to manipulate the robot’s end-effector in a natural and responsive manner.
-</p>
+
 **Phantom_to_Interbotix_teleop** is a ROS 2–based teleoperation framework that enables real-time, intuitive control of an **Interbotix RX200 robotic arm** using a **Geomagic Touch (Phantom) haptic device**. The project bridges human hand motions captured by a force-feedback stylus with precise robotic arm movements, allowing an operator to manipulate the robot’s end-effector in a natural and responsive manner.
 
 This system is particularly useful in robotics research, prototyping, and educational environments where human-in-the-loop control and intuitive manipulation are required.
 
 ---
-
-## Motivation and Objectives
+<h2 style="color:blue;">Motivation and Objectives</h2>
 Robotic manipulation often requires fine-grained, intuitive control that can be difficult to achieve using traditional interfaces such as keyboards or joysticks. The main objectives of this project are:
 
 - To provide a **natural teleoperation interface** for controlling a robotic arm
@@ -23,8 +22,7 @@ Robotic manipulation often requires fine-grained, intuitive control that can be 
 - To serve as a flexible base for future extensions in teleoperation and haptics research
 
 ---
-
-## System Architecture
+<h2 style="color:blue;">System Architecture</h2>
 The system follows a publisher–subscriber architecture using ROS 2:
 
 - The **Geomagic Touch device** publishes pose, orientation, and button state data

@@ -4,7 +4,10 @@ excerpt: "Built a real-time bimanual control system in ROS 2 where a secondary R
 collection: portfolio
 ---
 <br/><img src='/images/image.png'>
-## Project Overview
+<h2 style="color:red;">Project Overview</h2>
+
+**Phantom_to_Interbotix_teleop** is a ROS 2–based teleoperation framework that enables real-time, intuitive control of an **Interbotix RX200 robotic arm** using a **Geomagic Touch (Phantom) haptic device**. The project bridges human hand motions captured by a force-feedback stylus with precise robotic arm movements, allowing an operator to manipulate the robot’s end-effector in a natural and responsive manner.
+
 **Phantom_to_Interbotix_teleop** is a ROS 2–based teleoperation framework that enables real-time, intuitive control of an **Interbotix RX200 robotic arm** using a **Geomagic Touch (Phantom) haptic device**. The project bridges human hand motions captured by a force-feedback stylus with precise robotic arm movements, allowing an operator to manipulate the robot’s end-effector in a natural and responsive manner.
 
 This system is particularly useful in robotics research, prototyping, and educational environments where human-in-the-loop control and intuitive manipulation are required.

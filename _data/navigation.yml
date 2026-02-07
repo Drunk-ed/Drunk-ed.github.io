@@ -11,8 +11,8 @@ main:
   #- title: "Publications"
   # url: /publications/
 
-  #- title: "Talks"
-  #  url: /talks/    
+  - title: "Ongoing Projects"
+    url: /current/    
 
   #- title: "Teaching"
   #  url: /teaching/    

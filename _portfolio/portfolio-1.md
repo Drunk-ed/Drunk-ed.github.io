@@ -1,6 +1,6 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Coordinated Bimanual Teleoperation via Haptic Device"
+excerpt: "Built a real-time bimanual control system in ROS 2 where a secondary ReactorX-200 robot arm mirrors the movements of a teleoperated leader arm.<br/><img src='/images/image.png'>"
 collection: portfolio
 ---
 

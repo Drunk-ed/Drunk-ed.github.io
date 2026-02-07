@@ -7,9 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [Academic Pages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the repository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. Incidentally, these same features make it a great template for anyone that needs to show off a professional template!
+As an electronics student with a strong interest in robotics and control theory, I am motivated by the role of control and automation of intelligent robotic systems for advanced applications such as space robotics and Precision manipulation. My primary interests lie in dynamics, optimal control, and adaptive control, and how these tools can be used to design robotic systems that operate robustly under uncertainty.
 
- You can fork [this template](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and Markdown files, add your own PDFs and other content, and have your own site for free, with no ads!
+My engagement with robotics began through studying manipulator kinematics and dynamics, where I implemented inverse dynamics and explored spatial algebra formulations for rigid-body systems. This hands-on work helped me connect mathematical models with real system behavior and strengthened my interest in control-oriented robotics. I have also been studying optimal control concepts such as Pontryagin’s Minimum Principle and Lyapunov-based methods for stability and adaptive control, which further shaped my research interests.
+
+I am particularly interested in adaptive, optimal, and robust control strategies for robotic systems operating under uncertainty, where modeling errors and disturbances are unavoidable. The challenge of designing controllers that remain stable and performant under uncertainty is what draws me toward research in this area. I enjoy approaching problems from both theoretical and implementation perspectives, validating ideas through simulation and experimentation.
+
+I am eager to contribute to research that advances intelligent robotic systems and high-reliability control applications. My goal is to build a strong foundation in control and robotics research and to work on problems that demand both mathematical rigor and practical insight.
 
 A data-driven personal website
 ======

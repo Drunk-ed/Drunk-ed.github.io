@@ -8,44 +8,45 @@ collection: portfolio
 
 <!-- Image -->
 <div style="text-align:center; margin:15px 0;">
-  <img src="/images/image.png" alt="Bimanual Teleoperation"
+  <img src="/images/bimanual.png" alt="Bimanual Teleoperation"
        style="max-width:75%; border-radius:8px;">
 </div>
 
 <!-- Project Overview -->
-<h2 style="color:#5dade2; margin-bottom:1px;">Project Overview</h2>
+<h2 style="color:#5dade2; margin-bottom:5px;">Project Overview</h2>
 
-<p style="margin-top:0; margin-bottom:1px;">
-<strong>Phantom_to_Interbotix_teleop</strong> is a ROS 2-based teleoperation
-framework enabling <strong>real-time, intuitive control</strong> of an
-<strong>Interbotix RX200 robotic arm</strong> using a
+<p style="margin-top:0; margin-bottom:8px;">
+This project focused on developing a <strong>real-time bimanual teleoperation system</strong> where two
+<strong>Interbotix RX200 robotic arms</strong> are coordinated using a
 <strong>Geomagic Touch haptic device</strong>.
 </p>
 
 <p style="margin-top:0; margin-bottom:8px;">
-The project maps human hand motions to precise robot movements for natural
-end-effector control.
-</p>
-
-<p style="margin-top:0; margin-bottom:8px;">
-Useful in robotics research and human-in-the-loop applications.
+The system enables a <strong>leader–mimic configuration</strong> in which one robot follows the operator’s motion
+while the second robot mirrors the motion in a synchronized and safe manner.
+The goal was to achieve smooth, low-latency, coordinated dual-arm manipulation
+for cooperative tasks such as object handling.
 </p>
 
 <hr style="margin:18px 0;">
 
-<!-- Motivation -->
-<h2 style="color:#5dade2; margin-bottom:5px;">Motivation and Objectives</h2>
+<!-- Objective -->
+<h2 style="color:#5dade2; margin-bottom:5px;">Objective</h2>
 
 <p style="margin-top:0; margin-bottom:8px;">
-Robotic manipulation requires intuitive control beyond keyboards or joysticks.
+The main objective was to design a teleoperation framework that:
 </p>
 
 <ul style="margin-top:5px; margin-bottom:8px;">
-  <li>Natural teleoperation interface</li>
-  <li>Haptic + ROS 2 integration</li>
-  <li>Real-time end-effector & gripper control</li>
-  <li>Foundation for teleoperation research</li>
+  <li>Allows intuitive control through a haptic interface</li>
+  <li>Maintains coordination between two robot arms</li>
+  <li>Ensures safe execution using IK validation</li>
+  <li>Minimizes delay for precise small-scale movements</li>
 </ul>
+
+<p style="margin-top:0; margin-bottom:8px;">
+Relevant to applications in <strong>space robotics, surgical robotics, and cooperative manipulation</strong>.
+</p>
 
 <hr style="margin:18px 0;">
 
@@ -53,40 +54,73 @@ Robotic manipulation requires intuitive control beyond keyboards or joysticks.
 <h2 style="color:#5dade2; margin-bottom:5px;">System Architecture</h2>
 
 <p style="margin-top:0; margin-bottom:8px;">
-ROS 2 publisher-subscriber framework:
+Built on ROS 2 using modular nodes for:
 </p>
 
 <ul style="margin-top:5px; margin-bottom:8px;">
-  <li>Geomagic Touch → pose & buttons</li>
-  <li>Teleop node → input mapping</li>
-  <li>Interbotix RX200 → execution</li>
+  <li>Haptic pose acquisition</li>
+  <li>Coordinate frame transformation</li>
+  <li>Inverse kinematics computation</li>
+  <li>Robot command execution</li>
+  <li>Inter-robot synchronization</li>
 </ul>
 
 <p style="margin-top:0; margin-bottom:8px;">
-Loop rate: <strong>~50 Hz</strong>.
+A static TF aligned coordinate frames between the haptic device and robot bases.
+Haptic pose data was mapped to leader end-effector targets and mirrored for the mimic arm.
 </p>
+
+<hr style="margin:18px 0;">
+
+<!-- Contributions -->
+<h2 style="color:#5dade2; margin-bottom:5px;">My Contributions</h2>
+
+<ul style="margin-top:5px; margin-bottom:8px;">
+  <li>Developed ROS 2 nodes for haptic pose and button input</li>
+  <li>Implemented coordinate transformations for workspace mapping</li>
+  <li>Converted Cartesian commands to joint execution via Interbotix APIs</li>
+  <li>Enforced workspace and joint safety constraints</li>
+  <li>Designed mutual IK validation gating</li>
+  <li>Synchronized robots using Bool topics</li>
+  <li>Throttled command rates for stable control</li>
+  <li>Integrated gripper control via haptic buttons</li>
+</ul>
 
 <hr style="margin:18px 0;">
 
 <!-- Features -->
 <h2 style="color:#5dade2; margin-bottom:5px;">Key Features</h2>
-<h3 style="margin-bottom:3px;">Real-Time Teleoperation</h3>
-<ul style="margin-top:3px;">
-  <li>Continuous stylus mapping</li>
-  <li>Low-latency response</li>
-</ul>
 
-<h3 style="margin-bottom:3px;">Multi-Mode Control</h3>
-<ul style="margin-top:3px;">
-  <li>Cartesian control</li>
-  <li>Joint-level wrist rotation</li>
-  <li>Button switching</li>
-</ul>
+<h3 style="margin-bottom:3px;">Leader–Mimic Coordination</h3>
+<p style="margin-top:0; margin-bottom:8px;">
+Second arm mirrors the leader while maintaining spatial consistency for cooperative tasks.
+</p>
 
-<h3 style="margin-bottom:3px;">Gripper Control</h3>
-<ul style="margin-top:3px;">
-  <li>Toggle open/close</li>
-  <li>Interbotix API integration</li>
+<h3 style="margin-bottom:3px;">Mutual Motion Gating</h3>
+<p style="margin-top:0; margin-bottom:8px;">
+Motion executes only when both robots find valid IK solutions.
+</p>
+
+<h3 style="margin-bottom:3px;">Low-Latency Control</h3>
+<p style="margin-top:0; margin-bottom:8px;">
+Command rate regulation reduces perceptible delay.
+</p>
+
+<h3 style="margin-bottom:3px;">Safety Constraints</h3>
+<p style="margin-top:0; margin-bottom:8px;">
+Workspace and IK feasibility checks prevent unsafe configurations.
+</p>
+
+<hr style="margin:18px 0;">
+
+<!-- Tools -->
+<h2 style="color:#5dade2; margin-bottom:5px;">Tools & Technologies</h2>
+
+<ul style="margin-top:5px;">
+  <li>ROS 2 (rclpy)</li>
+  <li>Interbotix Manipulator API</li>
+  <li>Bimanual planning concepts</li>
+  <li>Shared autonomy principles</li>
 </ul>
 
 </div>

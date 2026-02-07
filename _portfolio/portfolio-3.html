@@ -1,0 +1,92 @@
+---
+title: "Coordinated Bimanual Teleoperation via Haptic Device"
+excerpt: "Built a real-time bimanual control system in ROS 2 where a secondary ReactorX-200 robot arm mirrors the movements of a teleoperated leader arm."
+collection: portfolio
+---
+
+<div style="max-width:900px; margin:auto; line-height:1.5; font-size:17px;">
+
+<!-- Image -->
+<div style="text-align:center; margin:15px 0;">
+  <img src="/images/image.png" alt="Bimanual Teleoperation"
+       style="max-width:75%; border-radius:8px;">
+</div>
+
+<!-- Project Overview -->
+<h2 style="color:#5dade2; margin-bottom:1px;">Project Overview</h2>
+
+<p style="margin-top:0; margin-bottom:1px;">
+<strong>Phantom_to_Interbotix_teleop</strong> is a ROS 2-based teleoperation
+framework enabling <strong>real-time, intuitive control</strong> of an
+<strong>Interbotix RX200 robotic arm</strong> using a
+<strong>Geomagic Touch haptic device</strong>.
+</p>
+
+<p style="margin-top:0; margin-bottom:8px;">
+The project maps human hand motions to precise robot movements for natural
+end-effector control.
+</p>
+
+<p style="margin-top:0; margin-bottom:8px;">
+Useful in robotics research and human-in-the-loop applications.
+</p>
+
+<hr style="margin:18px 0;">
+
+<!-- Motivation -->
+<h2 style="color:#5dade2; margin-bottom:5px;">Motivation and Objectives</h2>
+
+<p style="margin-top:0; margin-bottom:8px;">
+Robotic manipulation requires intuitive control beyond keyboards or joysticks.
+</p>
+
+<ul style="margin-top:5px; margin-bottom:8px;">
+  <li>Natural teleoperation interface</li>
+  <li>Haptic + ROS 2 integration</li>
+  <li>Real-time end-effector & gripper control</li>
+  <li>Foundation for teleoperation research</li>
+</ul>
+
+<hr style="margin:18px 0;">
+
+<!-- Architecture -->
+<h2 style="color:#5dade2; margin-bottom:5px;">System Architecture</h2>
+
+<p style="margin-top:0; margin-bottom:8px;">
+ROS 2 publisher-subscriber framework:
+</p>
+
+<ul style="margin-top:5px; margin-bottom:8px;">
+  <li>Geomagic Touch → pose & buttons</li>
+  <li>Teleop node → input mapping</li>
+  <li>Interbotix RX200 → execution</li>
+</ul>
+
+<p style="margin-top:0; margin-bottom:8px;">
+Loop rate: <strong>~50 Hz</strong>.
+</p>
+
+<hr style="margin:18px 0;">
+
+<!-- Features -->
+<h2 style="color:#5dade2; margin-bottom:5px;">Key Features</h2>
+<h3 style="margin-bottom:3px;">Real-Time Teleoperation</h3>
+<ul style="margin-top:3px;">
+  <li>Continuous stylus mapping</li>
+  <li>Low-latency response</li>
+</ul>
+
+<h3 style="margin-bottom:3px;">Multi-Mode Control</h3>
+<ul style="margin-top:3px;">
+  <li>Cartesian control</li>
+  <li>Joint-level wrist rotation</li>
+  <li>Button switching</li>
+</ul>
+
+<h3 style="margin-bottom:3px;">Gripper Control</h3>
+<ul style="margin-top:3px;">
+  <li>Toggle open/close</li>
+  <li>Interbotix API integration</li>
+</ul>
+
+</div>

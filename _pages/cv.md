@@ -3,93 +3,84 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
-redirect_from:
-  - /resume
 ---
 
 {% include base_path %}
 
-<div style="max-width:900px; margin:auto; line-height:1.5; font-size:17px;">
+## Education
+<hr>
 
-<!-- Education -->
-<h2 style="border-bottom:1px solid #000;">Education</h2>
+**Gandhi Institute of Technology and Management**, Visakhapatnam  
+*Bachelor of Technology – Electrical and Electronics*  
+CGPA: **8.85**  
+June 2024 – June 2027  
 
-<ul>
-  <li><strong>B.Tech in Electrical Engineering</strong>, GITAM University — 2027 (expected)</li>
-  <li><strong>Diploma</strong>, Government Polytechnic, Visakhapatnam — 2024</li>
-</ul>
+*Courses:* Analog Electronics, Digital Electronics, Control Systems,  
+Electromagnetic Fields, AC Machines, Signals and Systems  
 
-<!-- Work Experience -->
-<h2 style="border-bottom:1px solid #000;">Work Experience</h2>
+---
 
-<p><strong>Summer 2025 — Indian Institute</strong></p>
-<ul>
-  <li>GitHub University</li>
-  <li>Duties: Updates and improvements to template</li>
-  <li>Supervisor: The Users</li>
-</ul>
+## Skills Summary
+<hr>
 
-<p><strong>Fall 2015 — Research Assistant</strong></p>
-<ul>
-  <li>GitHub University</li>
-  <li>Duties: Merging pull requests</li>
-  <li>Supervisor: Professor Hub</li>
-</ul>
+- **Programming Languages:** Python, C, C++  
+- **Robotics Frameworks:** ROS 2, Gazebo, MuJoCo  
+- **Computer Vision:** OpenCV, YOLO  
+- **Simulation Tools:** MATLAB, Simulink, Multisim, LTspice, Fusion 360  
+- **Research Areas:** Nonlinear & Adaptive Control, Optimal Control and Learning, Robotics  
 
-<p><strong>Summer 2015 — Research Assistant</strong></p>
-<ul>
-  <li>GitHub University</li>
-  <li>Duties: Tagging issues</li>
-  <li>Supervisor: Professor Git</li>
-</ul>
+---
 
-<!-- Skills -->
-<h2 style="border-bottom:1px solid #000;">Skills</h2>
+## Experience
+<hr>
 
-<ul>
-  <li>Skill 1</li>
-  <li>Skill 2
-    <ul>
-      <li>Sub-skill 2.1</li>
-      <li>Sub-skill 2.2</li>
-      <li>Sub-skill 2.3</li>
-    </ul>
-  </li>
-  <li>Skill 3</li>
-</ul>
+### Indian Institute of Technology Dharwad (On-Site)  
+*Summer Intern (Full-time; Advisor: Prof. Ameer Mulla)*  
+**May 2025 – July 2025**
 
-<!-- Publications -->
-<h2 style="border-bottom:1px solid #000;">Publications</h2>
+- **Teleoperation Pipeline Development:** Developed a ROS 2-based teleoperation pipeline to control an Interbotix RX200 robot using Geomagic Touch input, converting Cartesian pose data into joint-space commands via inverse kinematics with joint-limit enforcement.  
+- **Bimanual Control System:** Engineered a bimanual control framework where a secondary RX200 mirrors the leader’s end-effector pose using real-time TF transformations and synchronized execution.  
+- **Mutual Gating and Safety Logic:** Implemented mutual motion gating using ROS 2 Bool topics and planning validity checks to ensure coordinated and safe dual-arm behavior.  
 
-<ul>
-{% for post in site.publications reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
+---
 
-<!-- Talks -->
-<h2 style="border-bottom:1px solid #000;">Talks</h2>
+### Visakhapatnam Port Authority (On-Site)  
+*Intern (Full-time)*  
+**June 2023 – Dec 2023**
 
-<ul>
-{% for post in site.talks reversed %}
-  {% include archive-single-talk-cv.html %}
-{% endfor %}
-</ul>
+- **Electrical Substation Operations:** Supported inspection and maintenance of high-voltage substations, working with transformers, switchgear, and protection systems.  
+- **Industrial Electrical Maintenance:** Assisted in troubleshooting motors and control panels, improving reliability via preventive diagnostics.  
+- **Power System Diagnostics:** Performed inspections on watercraft and rail systems focusing on wiring integrity, grounding, and load testing.  
 
-<!-- Teaching -->
-<h2 style="border-bottom:1px solid #000;">Teaching</h2>
+---
 
-<ul>
-{% for post in site.teaching reversed %}
-  {% include archive-single-cv.html %}
-{% endfor %}
-</ul>
+## Projects
+<hr>
 
-<!-- Service -->
-<h2 style="border-bottom:1px solid #000;">Service and Leadership</h2>
+- **Robot Dynamics and Control Simulation (Ongoing):** Designing model-based torque controllers using recursive Newton–Euler dynamics. Validated in MuJoCo and ROS 2 simulations.  
 
-<ul>
-  <li>Currently signed in to 43 different Slack teams</li>
-</ul>
+- **Trajectory Planning of Underwater Vehicle (Ongoing):** Lyapunov-based nonlinear adaptive control, MRAC, and Sliding Mode Control for robust trajectory tracking.  
 
-</div>
+- **Bimanual Robotic Arm Control with Safety Enforcement:** Leader–follower setup with motion gating and TF-based pose mirroring for cooperative manipulation.  
+
+- **Stylus-Based Robotic Arm Control Using ROS 2:** Teleoperation of an Interbotix RX200 using a Geomagic Touch device with real-time IK and safety enforcement.  
+
+- **Object Detection with ROS 2 Integration:** YOLO-based detection pipeline integrated with ROS 2 for real-time perception and tracking.  
+
+---
+
+## Honors and Awards
+<hr>
+
+- Runner-up — Internal Smart India Hackathon (Oct 2025)  
+- Quarter Finalist — Digital India RISC-V Grand Challenge (July 2025)  
+- 2nd Place — IEEE Xtreme (Institutional level) (Oct 2024)  
+
+---
+
+## Certifications
+<hr>
+
+- Control Systems Analysis — University of Colorado  
+- NASA Open Science 101  
+- Introduction to Shell Scripting — IBM  

@@ -4,103 +4,141 @@ excerpt: "Built a real-time teleoperation framework in ROS 2 where a ReactorX-20
 collection: portfolio
 ---
 
-<div style="max-width:900px; margin:auto; line-height:1.5; font-size:17px;">
+<style>
+  /* Container styling for uniform, professional spacing */
+  .project {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.45;
+    font-size: 17px;
+    padding: 8px 12px;
+    color: #111;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  .project img {
+    display: block;
+    margin: 14px auto;
+    max-width: 75%;
+    border-radius: 8px;
+  }
+
+  .project h2 {
+    color: #5dade2;
+    margin: 20px 0 6px 0; /* top breathing room, small gap before content */
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .project h3 {
+    margin: 14px 0 6px 0;
+    font-size: 17px;
+    line-height: 1.15;
+  }
+
+  .project p {
+    margin: 0 0 10px 0; /* compact paragraphs with consistent bottom gap */
+  }
+
+  .project ul {
+    margin: 6px 0 12px 22px; /* clean list spacing */
+  }
+
+  .project li {
+    margin-bottom: 6px;
+  }
+
+  .project hr {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  /* slightly smaller sub-headings if needed */
+  .project h3.small { font-size: 15.5px; }
+</style>
+
+<div class="project">
 
 <!-- Image -->
 <div style="text-align:center; margin:15px 0;">
-  <img src="/images/image.png" alt="Bimanual Teleoperation"
-       style="max-width:75%; border-radius:8px;">
+  <img src="/images/image.png" alt="Bimanual Teleoperation">
 </div>
 
 <!-- Project Overview -->
-<h2 style="color:#5dade2; margin-bottom:1px;">Project Overview</h2>
+<h2>Project Overview</h2>
 
-<p style="margin-top:0; margin-bottom:1px;">
-<strong>Phantom_to_Interbotix_teleop</strong> is a ROS 2-based teleoperation
+<p><strong>Phantom_to_Interbotix_teleop</strong> is a ROS 2-based teleoperation
 framework enabling <strong>real-time, intuitive control</strong> of an
 <strong>Interbotix RX200 robotic arm</strong> using a
-<strong>Geomagic Touch haptic device</strong>.
-</p>
+<strong>Geomagic Touch haptic device</strong>.</p>
 
-<p style="margin-top:0; margin-bottom:8px;">
-The project maps human hand motions to precise robot movements for natural
-end-effector control.
-</p>
+<p>The project maps human hand motions to precise robot movements for natural
+end-effector control.</p>
 
-<p style="margin-top:0; margin-bottom:8px;">
-Useful in robotics research and human-in-the-loop applications.
-</p>
+<p>Useful in robotics research and human-in-the-loop applications.</p>
 
-<hr style="margin:18px 0;">
+<hr>
 
 <!-- Motivation -->
-<h2 style="color:#5dade2; margin-bottom:5px;">Motivation and Objectives</h2>
+<h2>Motivation and Objectives</h2>
 
-<p style="margin-top:0; margin-bottom:8px;">
-Robotic manipulation requires intuitive control beyond keyboards or joysticks.
-</p>
+<p>Robotic manipulation requires intuitive control beyond keyboards or joysticks.</p>
 
-<ul style="margin-top:5px; margin-bottom:8px;">
+<ul>
   <li>Natural teleoperation interface</li>
   <li>Haptic + ROS 2 integration</li>
   <li>Real-time end-effector & gripper control</li>
   <li>Foundation for teleoperation research</li>
 </ul>
 
-<hr style="margin:18px 0;">
+<hr>
 
 <!-- Architecture -->
-<h2 style="color:#5dade2; margin-bottom:5px;">System Architecture</h2>
+<h2>System Architecture</h2>
 
-<p style="margin-top:0; margin-bottom:8px;">
-ROS 2 publisher-subscriber framework:
-</p>
+<p>ROS 2 publisher-subscriber framework:</p>
 
-<ul style="margin-top:5px; margin-bottom:8px;">
+<ul>
   <li>Geomagic Touch → pose & buttons</li>
   <li>Teleop node → input mapping</li>
   <li>Interbotix RX200 → execution</li>
 </ul>
 
-<p style="margin-top:0; margin-bottom:8px;">
-Loop rate: <strong>~50 Hz</strong>.
-</p>
+<p>Loop rate: <strong>~50 Hz</strong>.</p>
 
-<hr style="margin:18px 0;">
+<hr>
 
 <!-- Features -->
-<h2 style="color:#5dade2; margin-bottom:0px;">Key Features</h2>
-<h3 style="margin-bottom:3px;">Real-Time Teleoperation</h3>
-<ul style="margin-top:3px;">
+<h2>Key Features</h2>
+
+<h3>Real-Time Teleoperation</h3>
+<ul>
   <li>Continuous stylus mapping</li>
   <li>Low-latency response</li>
 </ul>
 
-<h3 style="margin-bottom:3px;">Multi-Mode Control</h3>
-<ul style="margin-top:3px;">
+<h3>Multi-Mode Control</h3>
+<ul>
   <li>Cartesian control</li>
   <li>Joint-level wrist rotation</li>
   <li>Button switching</li>
 </ul>
 
-<h3 style="margin-bottom:3px;">Gripper Control</h3>
-<ul style="margin-top:3px;">
+<h3>Gripper Control</h3>
+<ul>
   <li>Toggle open/close</li>
   <li>Interbotix API integration</li>
 </ul>
 
+<h2 style="margin-top:18px;">Approach:</h2>
 
-<h2 style="margin:0;">Approach:</h2>
-
-
-<h3 style="margin:4px;">Geomagic Touch:</h3>
-<p style="margin:0;">
-To use Geomagic Touch, Openhaptics and Touch device Drivers are needed. These
+<h3>Geomagic Touch:</h3>
+<p>To use Geomagic Touch, Openhaptics and Touch device Drivers are needed. These
 drivers are available at 3D Systems website. After successful installation of Haptic drivers the
-Geomagic touch publish data in 5 Topics. They are
-</p>
+Geomagic touch publish data in 5 Topics. They are</p>
 
-<ul style="margin:0 0 6px 18px;">
+<ul>
 <li><strong>/phantom/button:</strong> It publishes the state of the buttons on the Geomagic touch stylus pen.</li>
 
 <li><strong>/phantom/force_feedback:</strong> The topic /phantom/force typically publishes the force vector
@@ -117,80 +155,62 @@ which gives the pitch yaw and roll after conversion.</li>
 provides a high-level snapshot of the device in a single package:</li>
 </ul>
 
-<h3 style="margin:0;">Data Processing:</h3>
-<p style="margin:0;">
-The data from the Geomagic touch should be processed before feeding it to the robot.
+<h3>Data Processing:</h3>
+<p>The data from the Geomagic touch should be processed before feeding it to the robot.
 This process should be carried out because the Origin of the stylus pointer is not the Table i.e. (0,
 0, 0) it is at (0.00, 0.08, 0.06). So, a homogenous Transformation matrix is created the Geomagic
 coordinates into World coordinates. After converting the coordinates into world frame the values
-are fed to the IK Solver of Geomagic Touch.
-</p>
+are fed to the IK Solver of Geomagic Touch.</p>
 
-<p style="margin:4px 0;">
-The Geomagic touch is 6 DoF and the RX200 is 5 DoF which means the yaw motion of
+<p>The Geomagic touch is 6 DoF and the RX200 is 5 DoF which means the yaw motion of
 Geomagic touch should be neglected. But here is the caught Geomagic touch will not directly
 give pitch, yaw and roll. It gives out this data in the form of a quaternion. By converting the
 quaternion, we can get pitch, yaw and roll. If we force the yaw to 0 the output will not be
 accurate. Because the pitch and roll are given with respect to yaw. So make this accurate I used
-the /phantom/joint_states to get the joint positions of pitch and roll joints. This actually helped
-</p>
+the /phantom/joint_states to get the joint positions of pitch and roll joints. This actually helped</p>
 
-<p style="margin:0;">
-Geomagic<br>
+<p>Geomagic<br>
 Touch<br>
 Data<br>
 Processing IK Solver End<br>
 Effector<br>
 me to get accurate pitch and roll. So, in the data processing the XYZ is taken from
 /phantom/pose, Button state from /phantom/button and orientation (pitch, roll) from
-/phantom/joint_states.
-</p>
+/phantom/joint_states.</p>
 
-<h3 style="margin:0;">IK Solver:</h3>
-<p style="margin:0;">
-The XYZ coordinates obtained from the input device (such as the Geomagic Touch) are
+<h3>IK Solver:</h3>
+<p>The XYZ coordinates obtained from the input device (such as the Geomagic Touch) are
 passed to the robot's Inverse Kinematics (IK) solver using the function set_ee_pose_components ().
 This function takes the desired end-effector position in 3D space specified by the X, Y, and Z
-values along with optional orientation parameters such as roll, pitch, and yaw.
-</p>
+values along with optional orientation parameters such as roll, pitch, and yaw.</p>
 
-<p style="margin:4px 0;">
-The IK solver processes these coordinates and computes the corresponding joint angles
+<p>The IK solver processes these coordinates and computes the corresponding joint angles
 required to move the robot's arm to the target position. Once the joint angles are determined, the
 robot's internal motion controller executes the movement, causing the arm to physically reach
-the specified position in space.
-</p>
+the specified position in space.</p>
 
-<h3 style="margin:0;">Gripper Control:</h3>
-<p style="margin:0;">
-For effective usage of gripper, I have created a method using the /phantom/button topic. I used
+<h3>Gripper Control:</h3>
+<p>For effective usage of gripper, I have created a method using the /phantom/button topic. I used
 grey button for gripper control. When the state of grey button is True the gripper will grasp and
 when the grey button state is False then the gripper will release. So, to hold an object one need to
 press and hold the grey button. This is done by using gripper.grasp and gripper.release functions
-of interbotix manipulator package.
-</p>
+of interbotix manipulator package.</p>
 
-<h3 style="margin:0;">Button Configuration:</h3>
-<p style="margin:0;">
-I first configured the White button for orientation. When white button is pressed then the pitch
+<h3>Button Configuration:</h3>
+<p>I first configured the White button for orientation. When white button is pressed then the pitch
 and roll of the robot can be changed. I have defined the Pose_Callback function such that when
 no button is pressed, we can manipulate the robot with XYZ coordinates but the roll and pitch of
 the robot will remain unchanged. When white button is pressed the XYZ coordinates will remain
 unchanged but we can control the orientation of the wrist. After getting the correct orientation,
 release the white button and press and hold the grey button to hold the object. After releasing
 the grey button, the gripper is released and the orientation of the wrist will go to zero and it goes
-to XYZ manipulation mode.
-</p>
+to XYZ manipulation mode.</p>
 
-<h3 style="margin:0;">Workspace Expansion:</h3>
-<p style="margin:0;">
-As the Geomagic workspace is very small, the workspace of the robotic arm is also limited. To
+<h3>Workspace Expansion:</h3>
+<p>As the Geomagic workspace is very small, the workspace of the robotic arm is also limited. To
 reach the object the object which is in the RX200 workspace but not in Geomagic workspace is
 not possible. This is undesirable because the RX200 robot can reach the object but because of
 using Geomagic coordinates it could’nt reach the goal position. To overcome this, I multiplied the
-Geomagic coordinates with 2 which increased the workspace by 2 times.
-</p>
-
-
+Geomagic coordinates with 2 which increased the workspace by 2 times.</p>
 
 </div>

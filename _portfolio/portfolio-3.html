@@ -165,11 +165,12 @@ but forcing yaw to zero causes inaccuracy because <strong>pitch and roll are rel
 To solve this, I used <strong>/phantom/joint_states</strong> to get actual pitch and roll joint values.
 This helped me obtain <strong>accurate orientation</strong>.
 
-So in processing:<br>
+So in processing:</p>
+<ul>
 <li><strong>XYZ → /phantom/pose</strong><br></li>
 <li><strong>Button state → /phantom/button</strong><br></li>
 <li><strong>Orientation (pitch, roll) → /phantom/joint_states</strong></p></li>
-
+</ul>
 <h2>IK Solver</h2>
 <p>The XYZ coordinates from the input device are passed to the robot's <strong>Inverse Kinematics (IK) solver</strong>
 using <strong>set_ee_pose_components()</strong>.

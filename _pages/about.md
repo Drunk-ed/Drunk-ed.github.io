@@ -6,14 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-<iframe
-  src="https://calendar.google.com/calendar/u/0?cid=MDFiYTU3YmRjNTAxYzY0ODc3OWU5NTBmM2E1MzY3NWU3ZGViNmY2NDcxY2RkNzVkMTM2MDRiMTI4ODk4NWQ0OEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t"
-  style="border:0"
-  width="100%"
-  height="600"
-  frameborder="0"
-  scrolling="no">
-</iframe>
 
 As an electronics student with a strong interest in robotics and control theory, I am motivated by the role of control and automation of intelligent robotic systems for advanced applications such as space robotics and Precision manipulation. My primary interests lie in dynamics, optimal control, and adaptive control, and how these tools can be used to design robotic systems that operate robustly under uncertainty.
 

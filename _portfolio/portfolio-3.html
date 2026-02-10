@@ -166,12 +166,12 @@ To solve this, I used <strong>/phantom/joint_states</strong> to get actual pitch
 This helped me obtain <strong>accurate orientation</strong>.
 
 So in processing:<br>
-<strong>XYZ → /phantom/pose</strong><br>
-<strong>Button state → /phantom/button</strong><br>
-<strong>Orientation (pitch, roll) → /phantom/joint_states</strong></p>
+<li><strong>XYZ → /phantom/pose</strong><br></li>
+<li><strong>Button state → /phantom/button</strong><br></li>
+<li><strong>Orientation (pitch, roll) → /phantom/joint_states</strong></p></li>
 
 <h2>IK Solver</h2>
-<p>The XYZ coordinates from the input device are passed to the robot’s <strong>Inverse Kinematics (IK) solver</strong>
+<p>The XYZ coordinates from the input device are passed to the robot's <strong>Inverse Kinematics (IK) solver</strong>
 using <strong>set_ee_pose_components()</strong>.
 This function takes desired <strong>end-effector position (X, Y, Z)</strong> and optional <strong>roll, pitch, yaw</strong>.</p>
 

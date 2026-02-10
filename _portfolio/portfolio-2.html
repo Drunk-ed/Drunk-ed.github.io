@@ -12,115 +12,185 @@ collection: portfolio
        style="max-width:75%; border-radius:8px;">
 </div>
 
-<!-- Project Overview -->
-<h2 style="color:#5dade2; margin-bottom:5px;">Project Overview</h2>
+<h2 style="color:#5dade2;">Project Overview</h2>
 
-<p style="margin-top:0; margin-bottom:8px;">
+<p>
 This project focused on developing a <strong>real-time bimanual teleoperation system</strong> where two
 <strong>Interbotix RX200 robotic arms</strong> are coordinated using a
 <strong>Geomagic Touch haptic device</strong>.
 </p>
 
-<p style="margin-top:0; margin-bottom:8px;">
+<p>
 The system enables a <strong>leader-mimic configuration</strong> in which one robot follows the operator’s motion
 while the second robot mirrors the motion in a synchronized and safe manner.
 The goal was to achieve smooth, low-latency, coordinated dual-arm manipulation
 for cooperative tasks such as object handling.
 </p>
 
-<hr style="margin:18px 0;">
+<hr>
 
-<!-- Objective -->
-<h2 style="color:#5dade2; margin-bottom:5px;">Objective</h2>
+<h2 style="color:#5dade2;">Objective</h2>
 
-<p style="margin-top:0; margin-bottom:8px;">
-The main objective was to design a teleoperation framework that:
-</p>
+<p>The main objective was to design a teleoperation framework that:</p>
 
-<ul style="margin-top:5px; margin-bottom:8px;">
-  <li>Allows intuitive control through a haptic interface</li>
-  <li>Maintains coordination between two robot arms</li>
-  <li>Ensures safe execution using IK validation</li>
-  <li>Minimizes delay for precise small-scale movements</li>
+<ul>
+<li>Allows intuitive control through a haptic interface</li>
+<li>Maintains coordination between two robot arms</li>
+<li>Ensures safe execution using IK validation</li>
+<li>Minimizes delay for precise small-scale movements</li>
 </ul>
 
-<p style="margin-top:0; margin-bottom:8px;">
+<p>
 Relevant to applications in <strong>space robotics, surgical robotics, and cooperative manipulation</strong>.
 </p>
 
-<hr style="margin:18px 0;">
+<hr>
 
-<!-- Architecture -->
-<h2 style="color:#5dade2; margin-bottom:5px;">System Architecture</h2>
+<h2 style="color:#5dade2;">System Architecture</h2>
 
-<p style="margin-top:0; margin-bottom:8px;">
-Built on ROS 2 using modular nodes for:
-</p>
+<p>Built on ROS 2 using modular nodes for:</p>
 
-<ul style="margin-top:5px; margin-bottom:8px;">
-  <li>Haptic pose acquisition</li>
-  <li>Coordinate frame transformation</li>
-  <li>Inverse kinematics computation</li>
-  <li>Robot command execution</li>
-  <li>Inter-robot synchronization</li>
+<ul>
+<li>Haptic pose acquisition</li>
+<li>Coordinate frame transformation</li>
+<li>Inverse kinematics computation</li>
+<li>Robot command execution</li>
+<li>Inter-robot synchronization</li>
 </ul>
 
-<p style="margin-top:0; margin-bottom:8px;">
+<p>
 A static TF aligned coordinate frames between the haptic device and robot bases.
 Haptic pose data was mapped to leader end-effector targets and mirrored for the mimic arm.
 </p>
 
-<hr style="margin:18px 0;">
+<hr>
 
-<!-- Contributions -->
-<h2 style="color:#5dade2; margin-bottom:5px;">My Contributions</h2>
+<h2 style="color:#5dade2;">My Contributions</h2>
 
-<ul style="margin-top:5px; margin-bottom:8px;">
-  <li>Developed ROS 2 nodes for haptic pose and button input</li>
-  <li>Implemented coordinate transformations for workspace mapping</li>
-  <li>Converted Cartesian commands to joint execution via Interbotix APIs</li>
-  <li>Enforced workspace and joint safety constraints</li>
-  <li>Designed mutual IK validation gating</li>
-  <li>Synchronized robots using Bool topics</li>
-  <li>Throttled command rates for stable control</li>
-  <li>Integrated gripper control via haptic buttons</li>
+<ul>
+<li>Developed ROS 2 nodes for haptic pose and button input</li>
+<li>Implemented coordinate transformations for workspace mapping</li>
+<li>Converted Cartesian commands to joint execution via Interbotix APIs</li>
+<li>Enforced workspace and joint safety constraints</li>
+<li>Designed mutual IK validation gating</li>
+<li>Synchronized robots using Bool topics</li>
+<li>Throttled command rates for stable control</li>
+<li>Integrated gripper control via haptic buttons</li>
 </ul>
 
-<hr style="margin:18px 0;">
+<hr>
 
-<!-- Features -->
-<h2 style="color:#5dade2; margin-bottom:5px;">Key Features</h2>
+<h2 style="color:#5dade2;">Key Features</h2>
 
-<h3 style="margin-bottom:3px;">Leader–Mimic Coordination</h3>
-<p style="margin-top:0; margin-bottom:8px;">
-Second arm mirrors the leader while maintaining spatial consistency for cooperative tasks.
-</p>
+<h3>Leader–Mimic Coordination</h3>
+<p>Second arm mirrors the leader while maintaining spatial consistency for cooperative tasks.</p>
 
-<h3 style="margin-bottom:3px;">Mutual Motion Gating</h3>
-<p style="margin-top:0; margin-bottom:8px;">
-Motion executes only when both robots find valid IK solutions.
-</p>
+<h3>Mutual Motion Gating</h3>
+<p>Motion executes only when both robots find valid IK solutions.</p>
 
-<h3 style="margin-bottom:3px;">Low-Latency Control</h3>
-<p style="margin-top:0; margin-bottom:8px;">
-Command rate regulation reduces perceptible delay.
-</p>
+<h3>Low-Latency Control</h3>
+<p>Command rate regulation reduces perceptible delay.</p>
 
-<h3 style="margin-bottom:3px;">Safety Constraints</h3>
-<p style="margin-top:0; margin-bottom:8px;">
-Workspace and IK feasibility checks prevent unsafe configurations.
-</p>
+<h3>Safety Constraints</h3>
+<p>Workspace and IK feasibility checks prevent unsafe configurations.</p>
 
-<hr style="margin:18px 0;">
+<hr>
 
-<!-- Tools -->
-<h2 style="color:#5dade2; margin-bottom:5px;">Tools & Technologies</h2>
+<h2 style="color:#5dade2;">Tools & Technologies</h2>
 
-<ul style="margin-top:5px;">
-  <li>ROS 2 (rclpy)</li>
-  <li>Interbotix Manipulator API</li>
-  <li>Bimanual planning concepts</li>
-  <li>Shared autonomy principles</li>
+<ul>
+<li>ROS 2 (rclpy)</li>
+<li>Interbotix Manipulator API</li>
+<li>Bimanual planning concepts</li>
+<li>Shared autonomy principles</li>
 </ul>
+
+<hr>
+
+<h2 style="color:#5dade2;">4.1 Approach</h2>
+
+<p>
+With the help of the Teleoperation node created in Chapter 3, Bimanual robot
+control is to be achieved. For this bimanual control, two RX200 interbotix robots are used.
+I thought of creating a mimic node which makes the robot(robot2) mimic the leader
+robot(robot1). I tried creating it but the delay is very high. When the leader robot moves
+the mimic robot is taking 1-2 seconds to move. The delay of 2 seconds is not at all good.
+So, to reduce the delay I created two teleoperation nodes for two robots. With this, the
+data from the geomatic touch is processed separately by each node. With this the time
+taken for data processing and robot movement will be same for both robots. This is very
+crucial in bimanual robot control. Let’s call robot1 as Leader and robot2 as Mimic. Both
+the teleoperation nodes have the same code but some small changes in code
+differentiates between Leader and Mimic. I have to create a logic such that the Mimic
+robot mirrors the movements of Leader robot. In simple words, when the leader robot
+moves to the right, the mimic robot should move to the left.
+Before achieving this, I should make sure the two robot’s workspace coincides. Because
+only when the workspace coincides, the robots can hold the object. I have to make sure
+that the coincided workspace is maximum and the robots should not collide with each
+other.
+</p>
+
+
+
+<h2 style="color:#5dade2;">4.2 Workflow</h2>
+
+<h3>Robot Placement</h3>
+
+<p>
+The robot should be placed in such a way that the coincided robot workspace is
+maximum. For this I placed the Robots facing each other with a distance of 0.58m. For
+achieving this in simulation I launched leader robot with Rviz and Mimic robot without
+Rviz. In the leader robot’s Rviz, I added RobotModel and changed the topic to mimic
+robot. Now, the leader robot and mimic robot will coincide each other. To make them face
+each other i used ros_tf2_static_transform. With static_transform I made the mimic robot
+move 0.58m in X-direction and rotate along Z-axis by 3.14 radians. This makes the Mimic
+robot move apart from leader robot and face each other.
+</p>
+
+<h3>Collision Avoidance</h3>
+
+<p>
+The second task is to make sure the robots does not collide with each other. To
+make this I made a logic such that when the x > 0.24 the x = 0.24. With the robots will not
+collide because the robots are displaced by 0.58m they can come to half the distance
+that is 0.24 but should not exceed that. If it exceeds 0.24 since the robots are 0.58 meters
+aways the grippers collide each other. With this Logic collision problem is solved.
+</p>
+
+<h3>Delay Reduction</h3>
+
+<p>
+The major improvements I have implemented in bimanual control was delay
+reduction. Low latency is crucial in teleoperation. The latency should be very less to use
+geomagic touch for precise manipulation. If the system introduces a delay, any small
+movement in stylus results in robot responding after lag, making it difficult to perform
+smooth action. To execute fine movements, the user would have to move the stylus
+slightly and then wait for the robot to react before giving the next input. This is
+undesirable. By reducing the delay, I significantly improved the system’s responsiveness
+and enabling real time control on robotic arm.
+</p>
+
+<h3>Real-Time Pose Execution</h3>
+
+<p>
+In the teleoperation system that I have developed, real time pose execution is
+crucial. The pose data from geomagic touch is streamed at high frequency and used to
+continuously update the end effector position of RX200 robot. To prevent system
+overload and ensure stable performance, a frequency limiter is implemented, allowing
+pose updates for every 20 milliseconds (50 hz). This ensures the system process input
+data fast enough for smooth control.
+</p>
+
+<h3>Mutual Validation and Safety Enforcement</h3>
+
+<p>
+A key component of bimanual control in mutual validation mechanism, which
+ensures the robotic arms operate in synchronized manner. When the system enter leader-
+mimic mode (triggered by grey button), the leader arm makes a movement only if the
+mimic arm confirm a valid IK. This is done with the help of ROS2 topics named as
+/pose_valid_leader and /pose_valid_mimic. The /pose_valid_leader is used to publish the
+leader’s state and the /pose_valid_mimic for receiving mimic’s status. This gating
+mechanism prevents undesirable movement. When one arm fails to compute valid IK, the
+other arm will not make a movement, thus safeguarding shared object manipulation.
+</p>
 
 </div>

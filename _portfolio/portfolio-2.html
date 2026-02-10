@@ -4,15 +4,67 @@ excerpt: "Built a real-time bimanual control system in ROS 2 where a secondary R
 collection: portfolio
 ---
 
-<div style="max-width:900px; margin:auto; line-height:1.5; font-size:17px;">
+<style>
+  /* Container styling for uniform, professional spacing */
+  .project {
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.45;
+    font-size: 17px;
+    padding: 8px 12px;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+
+  .project img {
+    display: block;
+    margin: 14px auto;
+    max-width: 75%;
+    border-radius: 8px;
+  }
+
+  .project h2 {
+    color: #5dade2;
+    margin: 20px 0 6px 0; /* top breathing room, small gap before content */
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
+  .project h3 {
+    margin: 14px 0 6px 0;
+    font-size: 17px;
+    line-height: 1.15;
+  }
+
+  .project p {
+    margin: 0 0 10px 0; /* compact paragraphs with consistent bottom gap */
+  }
+
+  .project ul {
+    margin: 6px 0 12px 22px; /* clean list spacing */
+  }
+
+  .project li {
+    margin-bottom: 6px;
+  }
+
+  .project hr {
+    margin: 16px 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  /* slightly smaller sub-headings if needed */
+  .project h3.small { font-size: 15.5px; }
+</style>
+
+<div class="project">
 
 <!-- Image -->
 <div style="text-align:center; margin:15px 0;">
-  <img src="/images/bimanual.png" alt="Bimanual Teleoperation"
-       style="max-width:75%; border-radius:8px;">
+  <img src="/images/bimanual.png" alt="Bimanual Teleoperation">
 </div>
 
-<h2 style="color:#5dade2;">Project Overview</h2>
+<h2>Project Overview</h2>
 
 <p>
 This project focused on developing a <strong>real-time bimanual teleoperation system</strong> where two
@@ -29,7 +81,7 @@ for cooperative tasks such as object handling.
 
 <hr>
 
-<h2 style="color:#5dade2;">Objective</h2>
+<h2>Objective</h2>
 
 <p>The main objective was to design a teleoperation framework that:</p>
 
@@ -46,7 +98,7 @@ Relevant to applications in <strong>space robotics, surgical robotics, and coope
 
 <hr>
 
-<h2 style="color:#5dade2;">System Architecture</h2>
+<h2>System Architecture</h2>
 
 <p>Built on ROS 2 using modular nodes for:</p>
 
@@ -65,7 +117,7 @@ Haptic pose data was mapped to leader end-effector targets and mirrored for the 
 
 <hr>
 
-<h2 style="color:#5dade2;">My Contributions</h2>
+<h2>My Contributions</h2>
 
 <ul>
 <li>Developed ROS 2 nodes for haptic pose and button input</li>
@@ -80,7 +132,7 @@ Haptic pose data was mapped to leader end-effector targets and mirrored for the 
 
 <hr>
 
-<h2 style="color:#5dade2;">Key Features</h2>
+<h2>Key Features</h2>
 
 <h3>Leader–Mimic Coordination</h3>
 <p>Second arm mirrors the leader while maintaining spatial consistency for cooperative tasks.</p>
@@ -96,7 +148,7 @@ Haptic pose data was mapped to leader end-effector targets and mirrored for the 
 
 <hr>
 
-<h2 style="color:#5dade2;">Tools & Technologies</h2>
+<h2>Tools & Technologies</h2>
 
 <ul>
 <li>ROS 2 (rclpy)</li>
@@ -107,7 +159,7 @@ Haptic pose data was mapped to leader end-effector targets and mirrored for the 
 
 <hr>
 
-<h2 style="color:#5dade2;">4.1 Approach</h2>
+<h2>4.1 Approach</h2>
 
 <p>
 With the help of the Teleoperation node created in Chapter 3, Bimanual robot
@@ -129,9 +181,13 @@ that the coincided workspace is maximum and the robots should not collide with e
 other.
 </p>
 
+<hr>
 
+<h2 style="margin-top:18px;">4.2 Workflow</h2>
 
-<h2 style="color:#5dade2;">4.2 Workflow</h2>
+<div style="text-align:center; margin:15px 0;">
+  <img src="/images/flow.png" alt="Bimanual Teleoperation">
+</div>
 
 <h3>Robot Placement</h3>
 
@@ -192,5 +248,13 @@ leader’s state and the /pose_valid_mimic for receiving mimic’s status. This 
 mechanism prevents undesirable movement. When one arm fails to compute valid IK, the
 other arm will not make a movement, thus safeguarding shared object manipulation.
 </p>
+
+<h2>Demos</h2>
+
+<div style="text-align:center;">
+
+<p><strong>Pick and Place</strong></p>
+<iframe src="https://drive.google.com/file/d/1PE8FTKbdNdHakm85RU1mEQkoz0DIDtcU/preview" width="640" height="480"></iframe>
+</div>
 
 </div>

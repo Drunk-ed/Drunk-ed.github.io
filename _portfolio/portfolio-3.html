@@ -131,10 +131,13 @@ end-effector control.</p>
   <li>Interbotix API integration</li>
 </ul>
 
-<h2 style="margin-top:18px;">Approach:</h2>
+<h2 style="margin-top:18px;">Workflow</h2>
+<div style="text-align:center; margin:15px 0;">
+  <img src="/images/flow.png" alt="Bimanual Teleoperation">
+</div>
 
-<h2>Geomagic Touch:</h2>
-<p>       To use <strong>Geomagic Touch</strong>, <strong>Openhaptics</strong> and <strong>device Drivers</strong> are needed. These
+<h2>Geomagic Touch</h2>
+<p>To use <strong>Geomagic Touch</strong>, <strong>Openhaptics</strong> and <strong>device Drivers</strong> are needed. These
 drivers are available at <strong>3D Systems website</strong>. After successful installation of <strong>Haptic drivers</strong> the
 Geomagic touch publish data in <strong>5 Topics</strong>. They are</p>
 
@@ -150,7 +153,7 @@ Geomagic touch publish data in <strong>5 Topics</strong>. They are</p>
 <li><strong>/phantom/state:</strong> This topic publishes the <strong>complete state of the Geomagic Touch</strong>, providing a <strong>high-level snapshot</strong> of the device.</li>
 </ul>
 
-<h3>Data Processing:</h3>
+<h2>Data Processing</h2>
 <p>The data from the <strong>Geomagic touch must be processed</strong> before feeding it to the robot.
 This is required because the <strong>origin of the stylus pointer is not (0,0,0)</strong> but at <strong>(0.00, 0.08, 0.06)</strong>.
 So, a <strong>homogeneous transformation matrix</strong> converts Geomagic coordinates into <strong>World coordinates</strong>.
@@ -167,22 +170,22 @@ So in processing:
 <strong>Button state → /phantom/button</strong><br>
 <strong>Orientation (pitch, roll) → /phantom/joint_states</strong></p>
 
-<h3>IK Solver:</h3>
+<h2>IK Solver</h2>
 <p>The XYZ coordinates from the input device are passed to the robot’s <strong>Inverse Kinematics (IK) solver</strong>
 using <strong>set_ee_pose_components()</strong>.
 This function takes desired <strong>end-effector position (X, Y, Z)</strong> and optional <strong>roll, pitch, yaw</strong>.</p>
 
 <p>The IK solver computes the required <strong>joint angles</strong>.
-The robot’s <strong>internal motion controller</strong> then executes the movement so the arm reaches the target position.</p>
+The robot's <strong>internal motion controller</strong> then executes the movement so the arm reaches the target position.</p>
 
-<h3>Gripper Control:</h3>
+<h2>Gripper Control</h2>
 <p>I implemented gripper control using <strong>/phantom/button</strong>.
 The <strong>grey button</strong> controls the gripper:
 <strong>True → grasp</strong>, <strong>False → release</strong>.
 Holding the grey button holds the object.
 This uses <strong>gripper.grasp</strong> and <strong>gripper.release</strong> from the Interbotix package.</p>
 
-<h3>Button Configuration:</h3>
+<h2>Button Configuration</h2>
 <p>The <strong>White button controls orientation</strong>.
 When pressed, <strong>pitch and roll can be adjusted</strong>.
 When no button is pressed, only <strong>XYZ motion</strong> is allowed while orientation remains fixed.
@@ -190,7 +193,7 @@ Press white button → set orientation.
 Release white + hold grey → grasp object.
 Releasing grey → <strong>gripper releases and wrist resets to zero</strong>, returning to <strong>XYZ mode</strong>.</p>
 
-<h3>Workspace Expansion:</h3>
+<h2>Workspace Expansion</h2>
 <p>The Geomagic workspace is <strong>very small</strong>, limiting robot reach.
 Objects reachable by RX200 but outside Geomagic workspace become unreachable.
 To solve this, I <strong>scaled coordinates by 2×</strong>,

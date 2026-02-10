@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "contrast" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "About me"
 title_separator          : "-"
 name                     : &name "Your name"
@@ -26,7 +26,7 @@ author:
   avatar           : "profile.png"
   name             : "Gidijala Bhanu Shankar"
   pronouns         : "He/Him"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "Interested in space robotics and control systems, with a focus on constrained and uncertain environments."
   location         : "Visakhapatnam, India"
   Education        : "Gandhi Institute of Technology and Management"
   uri              : # URL
@@ -66,7 +66,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : Bhanu Shankar Gidijala
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

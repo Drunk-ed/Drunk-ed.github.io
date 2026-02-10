@@ -89,4 +89,109 @@ Loop rate: <strong>~50 Hz</strong>.
   <li>Interbotix API integration</li>
 </ul>
 
+
+<h2 style="margin:0;">CHAPTER 3:</h2>
+
+<h3 style="margin:0;">3.1 Approach:</h3>
+
+<h3 style="margin:0;">Geomagic Touch:</h3>
+<p style="margin:0;">
+To use Geomagic Touch, Openhaptics and Touch device Drivers are needed. These
+drivers are available at 3D Systems website. After successful installation of Haptic drivers the
+Geomagic touch publish data in 5 Topics. They are
+</p>
+
+<ul style="margin:0 0 6px 18px;">
+<li>/phantom/button: It publishes the state of the buttons on the Geomagic touch stylus pen.</li>
+
+<li>/phantom/force_feedback: The topic /phantom/force typically publishes the force vector
+measured or rendered at the end-effector (stylus tip) of the Geomagic Touch / SensAble
+Phantom haptic device.</li>
+
+<li>/phantom/joint_states: This topic publishes the Joint position of the Geomagic touch. It has 6
+joints Waist, Shoulder, Elbow, Yaw, Pitch and Roll.</li>
+
+<li>/phantom/pose: This topic publishes the X, Y, Z coordinates of the Stylus pointer and Quaternion
+which gives the pitch yaw and roll after conversion.</li>
+
+<li>/phantom/state: This topic publishes the complete state of the Geomagic Touch. This message
+provides a high-level snapshot of the device in a single package:</li>
+</ul>
+
+<h3 style="margin:0;">Data Processing:</h3>
+<p style="margin:0;">
+The data from the Geomagic touch should be processed before feeding it to the robot.
+This process should be carried out because the Origin of the stylus pointer is not the Table i.e. (0,
+0, 0) it is at (0.00, 0.08, 0.06). So, a homogenous Transformation matrix is created the Geomagic
+coordinates into World coordinates. After converting the coordinates into world frame the values
+are fed to the IK Solver of Geomagic Touch.
+</p>
+
+<p style="margin:4px 0;">
+The Geomagic touch is 6 DoF and the RX200 is 5 DoF which means the yaw motion of
+Geomagic touch should be neglected. But here is the caught Geomagic touch will not directly
+give pitch, yaw and roll. It gives out this data in the form of a quaternion. By converting the
+quaternion, we can get pitch, yaw and roll. If we force the yaw to 0 the output will not be
+accurate. Because the pitch and roll are given with respect to yaw. So make this accurate I used
+the /phantom/joint_states to get the joint positions of pitch and roll joints. This actually helped
+</p>
+
+<p style="margin:0;">
+Geomagic<br>
+Touch<br>
+Data<br>
+Processing IK Solver End<br>
+Effector<br>
+me to get accurate pitch and roll. So, in the data processing the XYZ is taken from
+/phantom/pose, Button state from /phantom/button and orientation (pitch, roll) from
+/phantom/joint_states.
+</p>
+
+<h3 style="margin:0;">IK Solver:</h3>
+<p style="margin:0;">
+The XYZ coordinates obtained from the input device (such as the Geomagic Touch) are
+passed to the robot's Inverse Kinematics (IK) solver using the function set_ee_pose_components ().
+This function takes the desired end-effector position in 3D space specified by the X, Y, and Z
+values along with optional orientation parameters such as roll, pitch, and yaw.
+</p>
+
+<p style="margin:4px 0;">
+The IK solver processes these coordinates and computes the corresponding joint angles
+required to move the robot's arm to the target position. Once the joint angles are determined, the
+robot's internal motion controller executes the movement, causing the arm to physically reach
+the specified position in space.
+</p>
+
+<h3 style="margin:0;">Gripper Control:</h3>
+<p style="margin:0;">
+For effective usage of gripper, I have created a method using the /phantom/button topic. I used
+grey button for gripper control. When the state of grey button is True the gripper will grasp and
+when the grey button state is False then the gripper will release. So, to hold an object one need to
+press and hold the grey button. This is done by using gripper.grasp and gripper.release functions
+of interbotix manipulator package.
+</p>
+
+<h3 style="margin:0;">Button Configuration:</h3>
+<p style="margin:0;">
+I first configured the White button for orientation. When white button is pressed then the pitch
+and roll of the robot can be changed. I have defined the Pose_Callback function such that when
+no button is pressed, we can manipulate the robot with XYZ coordinates but the roll and pitch of
+the robot will remain unchanged. When white button is pressed the XYZ coordinates will remain
+unchanged but we can control the orientation of the wrist. After getting the correct orientation,
+release the white button and press and hold the grey button to hold the object. After releasing
+the grey button, the gripper is released and the orientation of the wrist will go to zero and it goes
+to XYZ manipulation mode.
+</p>
+
+<h3 style="margin:0;">Workspace Expansion:</h3>
+<p style="margin:0;">
+As the Geomagic workspace is very small, the workspace of the robotic arm is also limited. To
+reach the object the object which is in the RX200 workspace but not in Geomagic workspace is
+not possible. This is undesirable because the RX200 robot can reach the object but because of
+using Geomagic coordinates it could’nt reach the goal position. To overcome this, I multiplied the
+Geomagic coordinates with 2 which increased the workspace by 2 times.
+</p>
+
+
+
 </div>

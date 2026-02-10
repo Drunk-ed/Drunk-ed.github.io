@@ -154,7 +154,7 @@ Geomagic touch publish data in <strong>5 Topics</strong>. They are</p>
 </ul>
 
 <h2>Data Processing</h2>
-<p>The data from the <strong>Geomagic touch must be processed</strong> before feeding it to the robot.
+<p>The data from the Geomagic touch must be processed before feeding it to the robot.
 This is required because the <strong>origin of the stylus pointer is not (0,0,0)</strong> but at <strong>(0.00, 0.08, 0.06)</strong>.
 So, a <strong>homogeneous transformation matrix</strong> converts Geomagic coordinates into <strong>World coordinates</strong>.
 After conversion, values are fed to the <strong>IK Solver</strong>.</p>
@@ -162,10 +162,10 @@ After conversion, values are fed to the <strong>IK Solver</strong>.</p>
 <p>The Geomagic touch is <strong>6 DoF</strong> and the RX200 is <strong>5 DoF</strong>, meaning <strong>yaw must be neglected</strong>.
 However, pitch/yaw/roll are provided as a <strong>quaternion</strong>. Converting quaternion gives pitch, yaw and roll,
 but forcing yaw to zero causes inaccuracy because <strong>pitch and roll are relative to yaw</strong>.
-To solve this, I used <strong>/phantom/joint_states</strong> to get <strong>actual pitch and roll joint values</strong>.
+To solve this, I used <strong>/phantom/joint_states</strong> to get actual pitch and roll joint values.
 This helped me obtain <strong>accurate orientation</strong>.
 
-So in processing:
+So in processing:<br>
 <strong>XYZ → /phantom/pose</strong><br>
 <strong>Button state → /phantom/button</strong><br>
 <strong>Orientation (pitch, roll) → /phantom/joint_states</strong></p>

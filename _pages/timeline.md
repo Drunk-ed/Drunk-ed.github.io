@@ -18,7 +18,7 @@ layout: single
     <div class="content">
       <h3>Started learning OOPS</h3>
       <p>Started learning Object Orientation Programming in Python for ROS2.</p>
-      <span class="date">Oct 2025</span>
+      <span class="date">Oct 2024</span>
     </div>
   </div>
 
@@ -34,7 +34,7 @@ layout: single
     <div class="content">
       <h3>Started learning Classical Control Theory.</h3>
       <p>Started learning Control Systems from NPTEL course by C.S Shankar Ram</p>
-      <span class="date">Mar 2024</span>
+      <span class="date">Mar 2025</span>
     </div>
   </div>
 
@@ -50,7 +50,7 @@ layout: single
     <div class="content">
       <h3>Internship at IITDH</h3>
       <p>Have done a 2 months internship at IITDH. The TOpic Haptic COntrolled Robotics.</p>
-      <span class="date">May 2024</span>
+      <span class="date">May 2025</span>
     </div>
   </div>
 
@@ -58,7 +58,7 @@ layout: single
     <div class="content">
       <h3>Quanser Qarm Project</h3>
       <p>Involved in a project to develop a package for Quanser Qarm for Object Detection and Pick and Place</p>
-      <span class="date">Apr 2025</span>
+      <span class="date">Jul 2025</span>
     </div>
   </div>
 
@@ -66,7 +66,7 @@ layout: single
     <div class="content">
       <h3>Underwater Vehicle Research Project</h3>
       <p>Involved in a Underwater Vehicle Reserach Project to develop controller for Nonlinear model by linearizing around a fixed point.</p>
-      <span class="date">Jul 2025</span>
+      <span class="date">Aug 2025</span>
     </div>
   </div>
 
@@ -106,7 +106,7 @@ layout: single
     <div class="content">
       <h3>Designing and Validating Optimal Controllers</h3>
       <p>Turning theoretical knowledge into practical controllers by using MuJoCo for mimicking robot and ROS2 for Interfacting.</p>
-      <span class="date">Jan 2025</span>
+      <span class="date">Jan 2026</span>
     </div>
   </div>
 
@@ -114,7 +114,7 @@ layout: single
     <div class="content">
       <h3>Involved into Floating Base Manipulator Project</h3>
       <p>Modeling dynamics of a floating base manipulator with a 3 DOF manipulator attached to the drone. Design Controller after modeling the Robot Dynamics accurately.</p>
-      <span class="date">Feb 2025</span>
+      <span class="date">Feb 2026</span>
     </div>
   </div>
 </div>

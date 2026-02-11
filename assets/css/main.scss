@@ -70,19 +70,24 @@
   position: absolute;
   width: 18px;
   height: 18px;
-  right: -9px;
-  background: white;
-  border: 4px solid #6a0dad;
   top: 30px;
   border-radius: 50%;
+  background: #6a0dad; /* filled circle */
+  z-index: 2;
 }
 
-.left { left: 0; }
-.right { left: 50%; }
-
-.right::after {
-  left: -9px;
+/* LEFT cards */
+.timeline-item.left::after {
+  left: 100%;
+  transform: translate(-50%, -50%);
 }
+
+/* RIGHT cards */
+.timeline-item.right::after {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
 
 .content {
   padding: 20px;

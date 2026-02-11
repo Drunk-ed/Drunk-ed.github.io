@@ -6,7 +6,29 @@ with joint-state feedback. Validating controllers in simulations using MuJoCo an
 collection: talks
 ---
 
+<!-- Toggle Buttons -->
+<div class="tab-buttons">
+  <button onclick="showTab('details')" id="btn-details" class="active">Project</button>
+  <button onclick="showTab('timeline')" id="btn-timeline">Timeline</button>
+</div>
 
+<!-- Project Content -->
+<div id="details" class="tab-content">
+  <h2>Project Overview</h2>
+  <p>
+    This project focuses on bimanual manipulation using two Interbotix arms
+    with synchronized motion planning and validity checks.
+  </p>
+
+  <p>
+    Implemented in ROS2 with coordinated control logic to ensure safe dual-arm operation.
+  </p>
+</div>
+
+<!-- Timeline Content -->
+<div id="timeline" class="tab-content" style="display:none;">
+  
+  <!-- Your existing timeline here -->
 <div class="timeline">
 
   <div class="timeline-item left">
@@ -98,3 +120,19 @@ collection: talks
   </div>
 
 </div>
+</div>
+
+
+
+<script>
+function showTab(tab) {
+  document.getElementById('details').style.display = 'none';
+  document.getElementById('timeline').style.display = 'none';
+
+  document.getElementById('btn-details').classList.remove('active');
+  document.getElementById('btn-timeline').classList.remove('active');
+
+  document.getElementById(tab).style.display = 'block';
+  document.getElementById('btn-' + tab).classList.add('active');
+}
+</script>

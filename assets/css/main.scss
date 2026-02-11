@@ -170,3 +170,33 @@
     box-shadow: 0 0 0 0 rgba(106, 13, 173, 0);
   }
 }
+/* ===== TAB BUTTONS ===== */
+
+.tab-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tab-buttons button {
+  background: #eee;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.tab-buttons button.active {
+  background: #6a0dad;
+  color: white;
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
